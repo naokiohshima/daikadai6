@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="wrapper col-md-8 col-md-offset-2 col-sm-10">
+    <p><%= notice %></p>
+    <h1>イベント一覧</h1>
+     <%= link_to "イベントを作成する", new_event_path, class: 'btn btn-default' %>
+    <% @events.each do |event| %>
+      <p>タイトル:<%= event.title %></p>
+      <p>本文:<%= event.content %></p>
+      <%= link_to "イベントを編集する", edit_event_path(event.id), data: { confirm: '本当に編集していいですか？' }, class: 'btn btn-sm btn-success' %>
+      <%= link_to 'イベントを削除する', event_path(event.id), method: :delete, data: { confirm: '本当に削除していいですか？' }, class: 'btn btn-sm btn-danger' %>
+    <% end %>
+  </div>
+</div>
