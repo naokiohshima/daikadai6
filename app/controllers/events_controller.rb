@@ -1,4 +1,5 @@
 class EventsController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_event, only: [:edit, :update, :destroy]
 
   def index
@@ -15,8 +16,10 @@ class EventsController < ApplicationController
 
   def create
     @event = Event.new(events_params)
+    @event.user_id = current_user.id
     if @event.save
      redirect_to events_path, notice: "イベントを作成しました！"
+     NoticeMailer.sendmail_event(@event).deliver
     else
      render 'new'
     end
