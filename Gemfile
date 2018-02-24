@@ -55,4 +55,13 @@ gem 'rails_admin'
 
 gem 'cancan'
 
-gem 'activeresource' 
+gem 'activeresource'
+
+gem 'dotenv-rails'
+
+gem 'omniauth'
+gem 'omniauth-twitter'
+gem 'omniauth-facebook'
+
+gem 'carrierwave'
+gem 'mini_magick'
