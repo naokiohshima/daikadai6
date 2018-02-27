@@ -1,0 +1,17 @@
+<% if user_signed_in? && event.favorite_user(current_user.id) %>
+    <p>お気に入りを解除する</p>
+    <%= button_to favorite_path(event_id: event.id), method: :delete do %>
+      <span>
+        ♥
+        <%= event.favorite_count %>
+      </span>
+    <% end %>
+  <% else %>
+  　<p>お気に入りにする</p>
+    <%= button_to favorites_path(event_id: event.id) do %>
+      <span>
+        ♡
+        <%= event.favorite_count %>
+      </span>
+    <% end %>
+<% end %>

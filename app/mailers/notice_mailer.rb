@@ -5,10 +5,10 @@ class NoticeMailer < ApplicationMailer
   #
   #   en.notice_mailer.sendmail_event.subject
   #
-  def sendmail_event
-    @greeting = "Hi"
+  def sendmail_event(event)
+    @event = event
 
-    mail to: "saylako@icloud.com"
-    subject: 'イベントが投稿されました'     
+    mail to: "saylako@icloud.com",
+         subject: 'イベントが投稿されました'
   end
 end

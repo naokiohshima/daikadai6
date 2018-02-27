@@ -1,14 +1,24 @@
 Rails.application.routes.draw do
 
+
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   devise_for :users, controllers: {
     registrations: "users/registrations",
     omniauth_callbacks: "users/omniauth_callbacks"
   }
-  resources :events, only: [:index, :new, :create, :edit, :update, :destroy] do
-    collection do
-      post :confirm
-    end
+
+  resources :events do
+    resources :comments
+    post :confirm, on: :collection
+  end
+  resources :notifications, only: [:index]
+  resources :favorites, only: [:create, :destroy]
+  #resources :users, only: [:index]
+  resources :users
+  resources :relationships, only: [:create, :destroy]
+
+  resources :conversations do
+    resources :messages
   end
 
   if Rails.env.development?

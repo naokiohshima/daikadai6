@@ -1,0 +1,6 @@
+<p>フォローした人の情報</p>
+<% @user.followed_users.each do |f| %>
+  <p><%= profile_img(f) %></p>
+  <p><%= f.name %></p>
+  <p><%= f.email %></p>
+<% end %>
