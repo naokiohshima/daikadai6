@@ -26,7 +26,6 @@ class EventsController < ApplicationController
     @event.user_id = current_user.id
     if @event.save
      redirect_to events_path, notice: "イベントを作成しました！"
-     NoticeMailer.sendmail_event(@event).deliver
     else
      render 'new'
     end
