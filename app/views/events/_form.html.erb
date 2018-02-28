@@ -11,13 +11,13 @@
     </div>
   <% end %>
 
-  <%= f.label :タイトル %>
+  <h4><%= f.label :タイトル %></h4>
   <%= f.text_field :title, class: 'form-control' %>
   <br>
-  <%= f.label :内容 %>
+  <h4><%= f.label :内容 %></h4>
   <%= f.text_field :content, class: 'form-control' %>
   <br>
-  <%= f.submit '投稿', class: 'btn btn-primary btn-block' %>
+  <%= f.submit '投稿', class: "square_btn" %>
 <% end %>
-
-<%= link_to "日記一覧画面にもどる", events_path %>
+  <br>
+<%= link_to "日記一覧画面にもどる", events_path, class: "square_btn" %>

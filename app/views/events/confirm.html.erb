@@ -1,17 +1,20 @@
 <div class="container">
   <div class="col-md-6 col-md-offset-3 col-sm-10 col-sm-offset-1">
-    <h3>以下の内容で、送信する。</h3>
+    <p>以下の内容で、送信する。</p>
     <%= form_for(@event) do |f| %>
       <%= f.hidden_field :title %>
       <%= f.hidden_field :content %>
-      <p>タイトル:<%= @event.title %></p>
-      <p>内容:<%= @event.content %></p>
-      <%= f.submit "登録する", class: 'btn btn-primary btn-block' %>
+      <div class="box16">
+      <p>タイトル: <%= @event.title %></p>
+      <p>内容: <%= @event.content %></p>
+      </div>
+      <%= f.submit "登録する", class: "square_btn" %>
+      <br>
     <% end %>
     <%= form_for(@event, url: new_event_path, method: 'get') do |f| %>
       <%= f.hidden_field :title %>
       <%= f.hidden_field :content %>
-      <%= f.submit "もどる", name: 'back', class: 'btn btn-default btn-block' %>
+      <%= f.submit "もどる", name: 'back', class: "square_btn" %>
     <% end %>
    </div>
   </div>

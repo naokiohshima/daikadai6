@@ -1,3 +1,4 @@
+<div class="container">
 <% if @over_ten %>
   <%= link_to '以前のメッセージ', '?m=all' %>
 <% end %>
@@ -8,6 +9,7 @@
       <% user = User.find(message.user_id) %>
       <div class="item">
         <div class="content">
+          <blockquote>
           <div class="header"><strong><%= user.name %></strong> <%= message.message_time %></div>
           <div class="list">
             <div class="item">
@@ -15,6 +17,7 @@
               <%= message.body %>
             </div>
           </div>
+         </blockquote>
         </div>
       </div>
     <% end %>
@@ -31,3 +34,4 @@
   </div>
 
 <% end %>
+</div>

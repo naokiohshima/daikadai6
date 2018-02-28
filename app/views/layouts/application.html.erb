@@ -26,22 +26,21 @@
 </head>
 <body>
   <header>
-    <ul>
-     <li><%= link_to "トップページ", root_path %></li>
-    <% if user_signed_in? %>
-     <li><%= link_to "日記一覧", events_path %></li>
-     <li><%= link_to 'マイページ', edit_user_registration_path %></li>
-     <li><%= link_to 'ユーザー一覧', users_path %></li>
-     <li><%= link_to "メッセージ", conversations_path %></li>
-     <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
-     <%= link_to notifications_path, class: "navbar-brand" do %>
-      <i class="fa fa-bell fa-1x"><span id="unread_count"><%= @notifications_count %></span></i>
-     <% end %>
-    <% else %>
-     <li><%= link_to 'ログイン', new_user_session_path %></li>
-     <li><%= link_to 'サインアップ', new_user_registration_path %></li>
-    <% end %>
-   </ul>
+      <ul>
+       <li><%= link_to "トップページ", root_path %></li>
+      <% if user_signed_in? %>
+       <li><%= link_to "日記一覧", events_path %></li>
+       <li><%= link_to 'ユーザー一覧', users_path %></li>
+       <li><%= link_to "メッセージ", conversations_path %></li>
+       <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
+       <%= link_to notifications_path, class: "navbar-brand" do %>
+        <i class="fa fa-bell fa-1x"><span id="unread_count"><%= @notifications_count %></span></i>
+       <% end %>
+      <% else %>
+       <li><%= link_to 'ログイン', new_user_session_path %></li>
+       <li><%= link_to 'サインアップ', new_user_registration_path %></li>
+      <% end %>
+     </ul>
   </header>
 
 <%= yield %>

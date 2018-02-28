@@ -2,7 +2,6 @@
 <% provide(:title, @user.name) %>
 <h1>マイページ (<%= @user.name %>)</h1>
 <p><%= profile_img(@user) %></p>
- <%= @user.email %>
   <%= render 'followed'%>
   <%= render 'follower'%>
 </div>

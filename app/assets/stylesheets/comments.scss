@@ -18,3 +18,61 @@ text-align: right;
 .left {
 text-align: left;
 }
+
+blockquote {
+    position: relative;
+    padding: 7px 16px;
+    box-sizing: border-box;
+    font-style: italic;
+    color: #464646;
+    border: solid 3px #72ccf4;
+}
+
+blockquote:before{
+    display: inline-block;
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+    vertical-align: middle;
+    text-align: center;
+    content: "\f10d";
+    font-family: FontAwesome;
+    background: #72ccf4;
+    color: #FFF;
+    font-size: 22px;
+}
+
+blockquote:after{
+    display: inline-block;
+    position: absolute;
+    bottom: -20px;
+    right: -20px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+    vertical-align: middle;
+    text-align: center;
+    content: "\f10e";
+    font-family: FontAwesome;
+    background: #72ccf4;
+    color: #FFF;
+    font-size: 22px;
+}
+
+blockquote p {
+    padding: 0;
+    margin: 10px 0;
+    line-height: 1.7;
+}
+
+blockquote cite {
+    display: block;
+    text-align: right;
+    color: #888888;
+    font-size: 0.9em;
+}

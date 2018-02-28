@@ -1,3 +1,21 @@
 // Place all the styles related to the notifications controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+h1 {
+color: #364e96;/*文字色*/
+padding: 0.5em 0;/*上下の余白*/
+border-top: solid 3px #364e96;/*上線*/
+border-bottom: solid 3px #364e96;/*下線*/
+}
+
+.box14{
+    padding: 0.2em 0.5em;
+    margin: 2em 0;
+    background: #d6ebff;
+    box-shadow: 0px 0px 0px 10px #d6ebff;
+    border: dashed 2px white;
+}
+.box14 p {
+    margin: 0;
+    padding: 0;
+}

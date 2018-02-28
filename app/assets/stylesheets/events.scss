@@ -15,3 +15,85 @@ input[type="submit"].btn-block{
 .container{
   padding-bottom: 85px;
 }
+
+.square_btn{
+    display: inline-block;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    background: #668ad8;/*ボタン色*/
+    color: #FFF;
+    border-bottom: solid 4px #627295;
+    border-radius: 3px;
+}
+.square_btn:active {/*ボタンを押したとき*/
+    -ms-transform: translateY(4px);
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);/*下に動く*/
+    border-bottom: none;/*線を消す*/
+}
+
+h1 {
+color: #364e96;/*文字色*/
+padding: 0.5em 0;/*上下の余白*/
+border-top: solid 3px #364e96;/*上線*/
+border-bottom: solid 3px #364e96;/*下線*/
+}
+
+.box17{
+    margin:2em 0;
+    position: relative;
+    padding: 0.5em 1.5em;
+    border-top: solid 2px black;
+    border-bottom: solid 2px black;
+}
+.box17:before, .box17:after{
+    content: '';
+    position: absolute;
+    top: -10px;
+    width: 2px;
+    height: -webkit-calc(100% + 20px);
+    height: calc(100% + 20px);
+    background-color: black;
+}
+.box17:before {left: 10px;}
+.box17:after {right: 10px;}
+.box17 p {
+    margin: 0;
+    padding: 0;
+}
+
+h4{
+position: relative;
+padding: 0.2em 0.5em;
+background: -moz-linear-gradient(to right, rgb(255, 124, 111), #ffc994);
+background: -webkit-linear-gradient(to right, rgb(255, 124, 111), #ffc994);
+background: linear-gradient(to right, rgb(255, 124, 111), #ffc994);
+color: white;
+font-weight: lighter;
+box-shadow: 0 0 4px rgba(0, 0, 0, 0.56);
+}
+
+.box2 {
+    padding: 0.5em 1em;
+    margin: 2em 0;
+    font-weight: bold;
+    color: #6091d3;/*文字色*/
+    background: #FFF;
+    border: solid 3px #6091d3;/*線*/
+    border-radius: 10px;/*角の丸み*/
+}
+.box2 p {
+    margin: 0;
+    padding: 0;
+}
+
+.box16{
+    padding: 0.5em 1em;
+    margin: 2em 0;
+    background: -webkit-repeating-linear-gradient(-45deg, #f0f8ff, #f0f8ff 3px,#e9f4ff 3px, #e9f4ff 7px);
+    background: repeating-linear-gradient(-45deg, #f0f8ff, #f0f8ff 3px,#e9f4ff 3px, #e9f4ff 7px);
+}
+.box16 p {
+    margin: 0;
+    padding: 0;
+}

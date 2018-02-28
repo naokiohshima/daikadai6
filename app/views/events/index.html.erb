@@ -2,17 +2,19 @@
   <div class="wrapper col-md-8 col-md-offset-2 col-sm-10">
     <p><%= notice %></p>
     <h1>日記一覧</h1>
-     <p><%= link_to "日記を作成する", new_event_path, class: 'btn btn-default' %></p>
+     <p><%= link_to "日記を作成する", new_event_path, class: "square_btn" %></p>
     <% @events.each do |event| %>
+       <div class="box17">
        <p><%= profile_img(event.user) %></p>
-       <p><%= event.user.name %></p>
+       <p>USERNAME:<%= event.user.name %></p>
        <%= link_to event_path(event) do %>
-        <p>タイトル:<%= event.title %></p>
+        <h4><p>タイトル:<%= event.title %></p></h4>
        <% end %>
        <% if current_user.id == event.user_id %>
        <%= link_to "日記を編集する", edit_event_path(event.id), data: { confirm: '本当に編集していいですか？' }, class: 'btn btn-sm btn-success' %>
        <%= link_to '日記を削除する', event_path(event.id), method: :delete, data: { confirm: '本当に削除していいですか？' }, class: 'btn btn-sm btn-danger' %>
        <% end %>
+     </div>
     <% end %>
   </div>
 </div>

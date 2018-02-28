@@ -1,3 +1,71 @@
 // Place all the styles related to the Messages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+h1 {
+color: #364e96;/*文字色*/
+padding: 0.5em 0;/*上下の余白*/
+border-top: solid 3px #364e96;/*上線*/
+border-bottom: solid 3px #364e96;/*下線*/
+}
+
+blockquote {
+    position: relative;
+    padding: 7px 16px;
+    box-sizing: border-box;
+    font-style: italic;
+    color: #464646;
+    border: solid 3px #72ccf4;
+}
+
+blockquote:before{
+    display: inline-block;
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+    vertical-align: middle;
+    text-align: center;
+    content: "\f10d";
+    font-family: FontAwesome;
+    background: #72ccf4;
+    color: #FFF;
+    font-size: 22px;
+}
+
+blockquote:after{
+    display: inline-block;
+    position: absolute;
+    bottom: -20px;
+    right: -20px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+    vertical-align: middle;
+    text-align: center;
+    content: "\f10e";
+    font-family: FontAwesome;
+    background: #72ccf4;
+    color: #FFF;
+    font-size: 22px;
+}
+
+blockquote p {
+    padding: 0;
+    margin: 10px 0;
+    line-height: 1.7;
+}
+
+blockquote cite {
+    display: block;
+    text-align: right;
+    color: #888888;
+    font-size: 0.9em;
+}
+
+.segment {
+  margin-top: 50px; 
+}

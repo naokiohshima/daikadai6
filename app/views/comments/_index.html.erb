@@ -2,8 +2,10 @@
   <% comments.each do |comment| %>
     <% unless comment.id.nil? %>
       <li>
+        <blockquote>
         <p class="left"><%= comment.user.name %>さんがコメントしました。</p>
         <p class="left"><%= comment.content %></p>
+        </blockquote>
         <% if current_user.id == comment.user.id %>
           <p class="right">
             <%= link_to '', edit_event_comment_path(event, comment), class: "fa fa-pencil-square-o fa-lg" %>

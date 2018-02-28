@@ -1,6 +1,8 @@
-<p>フォローした人の情報</p>
+<h2>フォローした人の情報</h2>
 <% @user.followed_users.each do |f| %>
+ <div class="box18">
   <p><%= profile_img(f) %></p>
   <p><%= f.name %></p>
   <p><%= f.email %></p>
+</div>
 <% end %>
