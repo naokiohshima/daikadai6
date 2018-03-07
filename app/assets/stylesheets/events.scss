@@ -20,23 +20,23 @@ input[type="submit"].btn-block{
     display: inline-block;
     padding: 0.5em 1em;
     text-decoration: none;
-    background: #668ad8;/*ボタン色*/
+    background: #668ad8;
     color: #FFF;
     border-bottom: solid 4px #627295;
     border-radius: 3px;
 }
-.square_btn:active {/*ボタンを押したとき*/
+.square_btn:active {
     -ms-transform: translateY(4px);
     -webkit-transform: translateY(4px);
-    transform: translateY(4px);/*下に動く*/
-    border-bottom: none;/*線を消す*/
+    transform: translateY(4px);
+    border-bottom: none;
 }
 
 h1 {
-color: #364e96;/*文字色*/
-padding: 0.5em 0;/*上下の余白*/
-border-top: solid 3px #364e96;/*上線*/
-border-bottom: solid 3px #364e96;/*下線*/
+color: #364e96;
+padding: 0.5em 0;
+border-top: solid 3px #364e96;
+border-bottom: solid 3px #364e96;
 }
 
 .box17{
@@ -77,10 +77,10 @@ box-shadow: 0 0 4px rgba(0, 0, 0, 0.56);
     padding: 0.5em 1em;
     margin: 2em 0;
     font-weight: bold;
-    color: #6091d3;/*文字色*/
+    color: #6091d3;
     background: #FFF;
-    border: solid 3px #6091d3;/*線*/
-    border-radius: 10px;/*角の丸み*/
+    border: solid 3px #6091d3;
+    border-radius: 10px;
 }
 .box2 p {
     margin: 0;
