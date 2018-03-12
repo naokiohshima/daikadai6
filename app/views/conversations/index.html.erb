@@ -5,11 +5,11 @@
     </thead>
     <tbody>
       <% @conversations.each do |conversation| %>
-        <td>
+        <p>
           <% if conversation.target_user(current_user).present? %>
             <h4><%= link_to conversation.target_user(current_user).name, conversation_messages_path(conversation)%></h4>
           <% end %>
-        </td>
+        </p>
       <% end %>
     </tbody>
   </table>
