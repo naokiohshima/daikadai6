@@ -32,7 +32,7 @@ class CommentsController < ApplicationController
     if @comment.update(comment_params)
       redirect_to events_path, notice: "コメントを更新しました！"
     else
-      render 'edit'
+      render 'symbol'
     end
   end
 

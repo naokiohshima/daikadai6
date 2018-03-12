@@ -1,8 +1,7 @@
 class ConversationsController < ApplicationController
- before_action :authenticate_user!
 
   def index
-    @users = User.all
+    @users = User.all.limit(5).offset(30)
     @conversations = Conversation.all
   end
 
@@ -13,7 +12,7 @@ class ConversationsController < ApplicationController
       @conversation = Conversation.create!(conversation_params)
     end
 
-  redirect_to conversation_messages_path(@conversation)
+    redirect_to conversation_messages_path(@conversation)
   end
 
   private
