@@ -1,7 +1,7 @@
 class ConversationsController < ApplicationController
 
   def index
-    @users = User.all.limit(5).offset(30)
+    @users = User.limit(10).order('id')
     @conversations = Conversation.all
   end
 
